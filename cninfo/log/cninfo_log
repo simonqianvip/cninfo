@@ -413,3 +413,640 @@
  'scheduler/enqueued/memory': 1,
  'start_time': datetime.datetime(2016, 11, 28, 8, 41, 6, 382000)}
 2016-11-28 16:56:43 [scrapy] INFO: Spider closed (finished)
+2016-11-28 18:15:42 [scrapy] INFO: Scrapy 1.1.0 started (bot: cninfo)
+2016-11-28 18:15:42 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'cninfo.spiders', 'LOG_LEVEL': 'INFO', 'SPIDER_MODULES': ['cninfo.spiders'], 'AUTOTHROTTLE_ENABLED': True, 'BOT_NAME': 'cninfo', 'LOG_FILE': '../log/cninfo_log'}
+2016-11-28 18:15:42 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2016-11-28 18:15:42 [cninfo.spiders.cninfo_spider] INFO: init mysql database
+2016-11-28 18:15:46 [cninfo.spiders.cninfo_spider] INFO: ---------- init firefox ----------
+2016-11-28 18:15:47 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2016-11-28 18:15:47 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2016-11-28 18:15:47 [scrapy] INFO: Enabled item pipelines:
+['cninfo.pipelines.MySQLStoreCninfoPipeline']
+2016-11-28 18:15:47 [scrapy] INFO: Spider opened
+2016-11-28 18:15:47 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-11-28 18:19:04 [cninfo.spiders.cninfo_spider] INFO: ''
+2016-11-28 18:19:04 [cninfo.util.mysql_util] INFO: ----------close mysql connecting----------
+2016-11-28 18:19:05 [scrapy] ERROR: Spider error processing <GET http://www.cninfo.com.cn> (referer: None)
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\twisted\internet\defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\simon\PycharmProjects\cninfo\cninfo\spiders\cninfo_spider.py", line 149, in parse
+    self.driver.close()
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 510, in close
+    self.execute(Command.CLOSE)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 234, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 401, in execute
+    return self._request(command_info[0], url, body=data)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 432, in _request
+    self._conn.request(method, parsed_url.path, body, headers)
+  File "C:\Python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "C:\Python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "C:\Python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "C:\Python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "C:\Python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "C:\Python27\lib\httplib.py", line 836, in connect
+    self.timeout, self.source_address)
+  File "C:\Python27\lib\socket.py", line 575, in create_connection
+    raise err
+error: [Errno 10061] 
+2016-11-28 18:19:05 [scrapy] INFO: Crawled 1 pages (at 1 pages/min), scraped 0 items (at 0 items/min)
+2016-11-28 18:19:05 [scrapy] INFO: Closing spider (finished)
+2016-11-28 18:19:05 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 215,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 264,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2016, 11, 28, 10, 19, 5, 547000),
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 12,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'spider_exceptions/error': 1,
+ 'start_time': datetime.datetime(2016, 11, 28, 10, 15, 47, 224000)}
+2016-11-28 18:19:05 [scrapy] INFO: Spider closed (finished)
+2016-11-28 18:19:11 [scrapy] INFO: Scrapy 1.1.0 started (bot: cninfo)
+2016-11-28 18:19:11 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'cninfo.spiders', 'LOG_LEVEL': 'INFO', 'SPIDER_MODULES': ['cninfo.spiders'], 'AUTOTHROTTLE_ENABLED': True, 'BOT_NAME': 'cninfo', 'LOG_FILE': '../log/cninfo_log'}
+2016-11-28 18:19:11 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2016-11-28 18:19:11 [cninfo.spiders.cninfo_spider] INFO: init mysql database
+2016-11-28 18:19:16 [cninfo.spiders.cninfo_spider] INFO: ---------- init firefox ----------
+2016-11-28 18:19:16 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2016-11-28 18:19:16 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2016-11-28 18:19:16 [scrapy] INFO: Enabled item pipelines:
+['cninfo.pipelines.MySQLStoreCninfoPipeline']
+2016-11-28 18:19:16 [scrapy] INFO: Spider opened
+2016-11-28 18:19:16 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-11-28 18:21:01 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,next page---------- 
+2016-11-28 18:21:02 [cninfo.spiders.cninfo_spider] INFO: local variable 'download_count' referenced before assignment
+2016-11-28 18:21:02 [cninfo.util.mysql_util] INFO: ----------close mysql connecting----------
+2016-11-28 18:21:02 [scrapy] INFO: Crawled 1 pages (at 1 pages/min), scraped 0 items (at 0 items/min)
+2016-11-28 18:21:02 [scrapy] INFO: Closing spider (finished)
+2016-11-28 18:21:02 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 215,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 264,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2016, 11, 28, 10, 21, 2, 125000),
+ 'log_count/INFO': 13,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2016, 11, 28, 10, 19, 16, 525000)}
+2016-11-28 18:21:02 [scrapy] INFO: Spider closed (finished)
+2016-11-28 18:32:15 [scrapy] INFO: Scrapy 1.1.0 started (bot: cninfo)
+2016-11-28 18:32:15 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'cninfo.spiders', 'LOG_LEVEL': 'INFO', 'SPIDER_MODULES': ['cninfo.spiders'], 'AUTOTHROTTLE_ENABLED': True, 'BOT_NAME': 'cninfo', 'LOG_FILE': '../log/cninfo_log'}
+2016-11-28 18:32:15 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2016-11-28 18:32:15 [cninfo.spiders.cninfo_spider] INFO: init mysql database
+2016-11-28 18:32:19 [cninfo.spiders.cninfo_spider] INFO: ---------- init firefox ----------
+2016-11-28 18:32:20 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2016-11-28 18:32:20 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2016-11-28 18:32:20 [scrapy] INFO: Enabled item pipelines:
+['cninfo.pipelines.MySQLStoreCninfoPipeline']
+2016-11-28 18:32:20 [scrapy] INFO: Spider opened
+2016-11-28 18:32:20 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-11-28 18:36:29 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,next page---------- 
+2016-11-28 18:38:02 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:38:10 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:38:28 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:38:54 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:38:54 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:38:56 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:38:56 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:39:00 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:39:00 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:39:06 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:39:07 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:39:13 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:39:13 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:39:16 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:39:16 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:39:18 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:39:18 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:39:23 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:39:23 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:39:29 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:39:29 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:39:32 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:39:32 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:39:37 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:39:37 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:39:39 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:39:40 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:39:43 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:39:43 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:39:48 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:39:48 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:39:52 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:39:52 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:39:57 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:39:57 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:40:01 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:40:01 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:40:05 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:40:05 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:40:10 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:40:10 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:40:16 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:40:16 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:40:19 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:40:20 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:40:23 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:40:23 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:40:26 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:40:26 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:40:32 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:40:32 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:40:35 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:41:54 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,next page---------- 
+2016-11-28 18:41:54 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:42:00 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:42:01 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:42:04 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:42:04 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:42:10 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:42:10 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:42:16 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:42:16 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:42:22 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:42:22 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:42:28 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:42:28 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:42:30 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:42:30 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:42:34 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:42:34 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:42:38 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:42:39 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:42:41 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:42:41 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:42:45 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:42:45 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:42:47 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:42:47 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:42:50 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:42:50 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:42:54 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:42:54 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:42:59 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:42:59 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:43:04 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:43:04 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:43:08 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:43:08 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:43:14 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:43:15 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:43:21 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:43:21 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:43:24 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:43:24 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:43:27 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:43:27 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:43:31 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:43:31 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:43:37 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:43:37 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:43:41 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:43:41 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:43:43 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:43:43 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:43:47 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:43:48 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:43:50 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:43:50 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:43:54 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:43:54 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:43:56 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:43:56 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:44:01 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:44:01 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:44:04 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:44:04 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:44:07 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:44:07 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:44:13 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:44:14 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:44:18 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:44:18 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:44:21 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:44:21 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:44:23 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:44:23 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:44:27 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:44:27 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:44:31 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:44:32 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:44:36 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:44:36 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:44:38 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:44:38 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:44:43 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:44:43 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:44:45 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:44:45 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:44:48 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:44:48 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:44:54 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:44:54 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:44:58 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:44:58 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:45:03 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:45:03 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:45:09 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:45:09 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:45:12 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:45:12 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:45:18 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:45:19 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:45:24 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:45:24 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:45:29 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:45:29 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:45:31 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:45:31 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:45:34 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:45:34 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:45:39 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:45:39 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:45:42 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:45:42 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:45:44 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:45:44 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:45:48 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:45:48 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:45:54 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:45:54 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:46:00 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:46:00 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:46:04 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:46:04 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:46:06 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:46:07 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:46:13 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:46:13 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:46:17 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:46:17 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:46:19 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:46:19 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:46:21 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:46:21 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:46:23 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:46:23 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:46:28 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:46:28 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:46:33 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:46:33 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:46:35 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:46:35 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:46:41 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:46:41 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:46:46 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:46:46 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:46:52 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:46:53 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:46:59 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:46:59 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:47:05 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:47:05 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:47:08 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:48:27 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,next page---------- 
+2016-11-28 18:48:28 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:48:31 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:48:31 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:48:36 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:48:36 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:48:40 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:48:40 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:48:45 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:48:45 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:48:51 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:48:51 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:48:55 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:48:55 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:48:59 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:48:59 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:49:04 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:49:05 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:49:10 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:49:10 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:49:12 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:49:12 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:49:15 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:49:15 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:49:19 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:49:19 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:49:23 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:49:23 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:49:27 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:49:27 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:49:29 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:49:30 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:49:35 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:49:35 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:49:37 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:49:37 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:49:42 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:49:42 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:49:46 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:49:46 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:49:50 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:49:50 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:49:55 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:49:56 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:50:02 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:50:02 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:50:06 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:50:06 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:50:08 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:50:08 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:50:12 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:50:12 [cninfo.spiders.cninfo_spider] INFO: ----------Data is Exsit----------
+2016-11-28 18:50:18 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 18:51:05 [cninfo.spiders.cninfo_spider] INFO: ----------company is Exsit----------
+2016-11-28 18:51:39 [cninfo.spiders.cninfo_spider] INFO: global name 'download_count' is not defined
+2016-11-28 18:51:40 [cninfo.util.mysql_util] INFO: ----------close mysql connecting----------
+2016-11-28 18:51:43 [scrapy] INFO: Crawled 1 pages (at 1 pages/min), scraped 0 items (at 0 items/min)
+2016-11-28 18:51:43 [scrapy] INFO: Closing spider (finished)
+2016-11-28 18:51:43 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 215,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 264,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2016, 11, 28, 10, 51, 43, 124000),
+ 'log_count/INFO': 270,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2016, 11, 28, 10, 32, 20, 246000)}
+2016-11-28 18:51:43 [scrapy] INFO: Spider closed (finished)
+2016-11-28 19:03:07 [scrapy] INFO: Scrapy 1.1.0 started (bot: cninfo)
+2016-11-28 19:03:07 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'cninfo.spiders', 'LOG_LEVEL': 'INFO', 'SPIDER_MODULES': ['cninfo.spiders'], 'AUTOTHROTTLE_ENABLED': True, 'BOT_NAME': 'cninfo', 'LOG_FILE': '../log/cninfo_log'}
+2016-11-28 19:03:07 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2016-11-28 19:03:07 [cninfo.spiders.cninfo_spider] INFO: init mysql database
+2016-11-28 19:03:11 [scrapy] INFO: Scrapy 1.1.0 started (bot: cninfo)
+2016-11-28 19:03:11 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'cninfo.spiders', 'LOG_LEVEL': 'INFO', 'SPIDER_MODULES': ['cninfo.spiders'], 'AUTOTHROTTLE_ENABLED': True, 'BOT_NAME': 'cninfo', 'LOG_FILE': '../log/cninfo_log'}
+2016-11-28 19:03:12 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2016-11-28 19:03:12 [cninfo.spiders.cninfo_spider] INFO: init mysql database
+2016-11-28 19:03:16 [cninfo.spiders.cninfo_spider] INFO: ---------- init firefox ----------
+2016-11-28 19:03:16 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2016-11-28 19:03:16 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2016-11-28 19:03:16 [scrapy] INFO: Enabled item pipelines:
+['cninfo.pipelines.MySQLStoreCninfoPipeline']
+2016-11-28 19:03:16 [scrapy] INFO: Spider opened
+2016-11-28 19:03:16 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-11-28 19:07:28 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,next page---------- 
+2016-11-28 19:07:32 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:07:35 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:07:39 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:07:45 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:07:49 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:07:55 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:08:00 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:08:04 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:08:11 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:08:16 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:08:22 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:08:27 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:08:30 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:08:35 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:08:41 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:08:47 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:08:49 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:08:52 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:08:57 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:09:00 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:09:04 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:09:09 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:09:16 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:09:19 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:09:24 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:09:30 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:11:00 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,next page---------- 
+2016-11-28 19:11:06 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:11:10 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:11:15 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:11:22 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:11:27 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:11:34 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:11:39 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:11:41 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:11:48 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:11:55 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:12:00 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:12:03 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:12:07 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:12:12 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:12:16 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:12:22 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:12:26 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:12:33 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:12:38 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:12:41 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:12:44 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:12:51 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:12:55 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:12:58 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:13:04 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:13:09 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:13:12 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:13:14 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:13:21 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:13:24 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:13:29 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:13:36 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:13:40 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:13:43 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:13:47 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:13:50 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:13:57 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:14:01 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:14:05 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:14:07 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:14:10 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:14:12 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:14:18 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:14:25 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:14:28 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:14:32 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:14:35 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:14:40 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:14:45 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:14:52 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:14:58 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:15:01 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:15:08 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:15:14 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:15:21 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:15:26 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:15:30 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:15:37 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:15:40 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:15:46 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:15:50 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:15:55 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:16:01 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:16:04 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:16:08 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:16:15 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:16:18 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:16:20 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:16:23 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:16:28 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:16:32 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:16:38 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:16:41 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:16:45 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:16:48 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:17:59 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,next page---------- 
+2016-11-28 19:18:06 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:18:09 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:18:13 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:18:16 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:18:20 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:18:27 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:18:32 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:18:34 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:18:39 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:18:46 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:18:53 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:18:55 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:19:01 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:19:05 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:19:08 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:19:11 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:19:15 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:19:21 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:19:26 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:19:31 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:19:38 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:19:43 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:19:49 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:19:54 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:19:59 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:20:05 [cninfo.spiders.cninfo_spider] INFO: ---------- sleep time ,wait download next data---------- 
+2016-11-28 19:20:08 [cninfo.spiders.cninfo_spider] INFO: ----------No spider data is success----------
+2016-11-28 19:20:08 [cninfo.util.mysql_util] INFO: ----------close mysql connecting----------
+2016-11-28 19:20:08 [scrapy] INFO: Crawled 1 pages (at 1 pages/min), scraped 0 items (at 0 items/min)
+2016-11-28 19:20:09 [scrapy] INFO: Closing spider (finished)
+2016-11-28 19:20:09 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 215,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 264,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2016, 11, 28, 11, 20, 9, 73000),
+ 'item_scraped_count': 128,
+ 'log_count/INFO': 142,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2016, 11, 28, 11, 3, 16, 746000)}
+2016-11-28 19:20:09 [scrapy] INFO: Spider closed (finished)
