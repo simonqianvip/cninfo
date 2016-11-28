@@ -1,0 +1,4 @@
+2016-11-17 16:11:51 [scrapy] INFO: Scrapy 1.1.0 started (bot: cninfo)
+2016-11-17 16:11:51 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'cninfo.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['cninfo.spiders'], 'LOG_FILE': 'stderr', 'BOT_NAME': 'cninfo'}
+2016-11-17 16:12:23 [scrapy] INFO: Scrapy 1.1.0 started (bot: cninfo)
+2016-11-17 16:12:23 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'cninfo.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['cninfo.spiders'], 'LOG_FILE': 'stderr', 'BOT_NAME': 'cninfo'}
