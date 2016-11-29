@@ -6,6 +6,9 @@ import logging
 # Function: mysql util class
 logger = logging.getLogger(__name__)
 class SqlUtil():
+    """
+    mysql until
+    """
     def __init__(self, ip_addr, user_name, passwd, db_name, port=3306):
         self.ip_addr = ip_addr
         self.user_name = user_name
@@ -16,7 +19,7 @@ class SqlUtil():
     # Function: connect to mysql server
     def connect(self):
         '''
-        连接数据库
+        get connect
         :return:
         '''
         try:
@@ -30,7 +33,7 @@ class SqlUtil():
     # Function: disconnect to mysql server
     def disconnect(self):
         '''
-        与数据库断开连接
+        close connect
         :return:
         '''
         try:
@@ -40,9 +43,13 @@ class SqlUtil():
         finally:
             logger.info('----------close mysql connecting----------')
 
-    # Function: get data from mysql db(select)
     # Parameter: mysql query cmd string
     def get_data_from_db(self, sql_cmd_str):
+        """
+        Function: get data from mysql db(select)
+        :param sql_cmd_str:
+        :return:
+        """
         try:
             cur = self.conn.cursor()
             cur.execute(sql_cmd_str)
@@ -53,9 +60,13 @@ class SqlUtil():
             return []
         return results
 
-    # Function: exec mysql cmd string(insert into,delete,create table,drop table...)
     # Parameter: mysql exec cmd string
     def exec_db_cmd(self, sql_cmd_str):
+        """
+        exec mysql cmd string(insert into,delete,create table,drop table...)
+        :param sql_cmd_str:
+        :return:
+        """
         try:
             cur = self.conn.cursor()
             cur.execute(sql_cmd_str)

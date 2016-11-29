@@ -16,13 +16,10 @@ class CninfoPipeline(object):
 
 
 logger = logging.getLogger(__name__)
-
-
 class MySQLStoreCninfoPipeline(object):
     """
     数据存储到mysql
     """
-
     def __init__(self, dbpool):
         self.dbpool = dbpool
 
@@ -126,12 +123,13 @@ class MySQLStoreCninfoPipeline(object):
                         tel,fax,URL,market_time,shares_time,publish_number,publish_price,publish_ratio,public_mode,
                         underwriting,referee,recommend,f_key)
                         values(%s, %s, %s, %s,%s,%s, %s, %s, %s,%s,%s, %s, %s, %s,%s,%s, %s, %s, %s,%s,%s,%s)
-                """, (item['company_name'], item['e_company_name'], item['register_add'], item['summary'], item['legal'],
-                      item['Secretaries'], item['register_money'],
-                      item['company_type'], item['zip_code'], item['tel'], item['fax'], item['URL'], item['market_time'],
-                      item['shares_time'], item['publish_number'],
-                      item['publish_price'], item['publish_ratio'], item['public_mode'], item['underwriting'],
-                      item['referee'], item['recommend'], item['f_key']))
+                """, (
+        item['company_name'], item['e_company_name'], item['register_add'], item['summary'], item['legal'],
+        item['Secretaries'], item['register_money'],
+        item['company_type'], item['zip_code'], item['tel'], item['fax'], item['URL'], item['market_time'],
+        item['shares_time'], item['publish_number'],
+        item['publish_price'], item['publish_ratio'], item['public_mode'], item['underwriting'],
+        item['referee'], item['recommend'], item['f_key']))
 
     def _handle_error(self, failue):
         logger.error(failue)
